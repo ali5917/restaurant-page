@@ -1,1 +1,1 @@
-console.log("Hello, Ali")
+import './styles.css';

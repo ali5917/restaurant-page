@@ -1,0 +1,87 @@
+@font-face {
+  font-family: "Editor's Note";
+  src: url('./fonts/editors-note/EditorsNote-HairlineItalic-iF664322be52ef6.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+}
+
+:root {
+    --mainBg: #E8E4D9;
+    --mainText: #171B26;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease-in-out;
+}
+
+button {
+    background: 0;
+    border: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--mainBg);
+}
+
+header {
+    background-color: var(--mainText);
+    color: var(--mainBg);
+    padding: 20px 40px 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--mainBg);
+    font-family: "Editor's Note";
+    font-weight: 200;
+    font-size: 80px;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5em;
+}
+
+nav button {
+    position: relative;
+    color: var(--mainBg);
+    font-size: 20px;
+    font-family: "Manrope";
+    font-weight: 200;
+    cursor: pointer;
+}
+
+nav button::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    height: 1.2px;
+    width: 100%;
+    background-color: var(--mainBg);
+    transform: scaleX(0);
+    transition: transform 0.25s ease-in-out;
+}
+
+nav button:hover::after {
+    transform: scaleX(1);   
+}
+
+footer {
+    
+}
+
+main {
+    flex: 1;
+}
