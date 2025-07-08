@@ -15,6 +15,12 @@
     padding: 0;
     box-sizing: border-box;
     transition: all 0.3s ease-in-out;
+    font-family: "Manrope";
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
 }
 
 button {
@@ -57,7 +63,6 @@ nav button {
     position: relative;
     color: var(--mainBg);
     font-size: 20px;
-    font-family: "Manrope";
     font-weight: 200;
     cursor: pointer;
 }
@@ -79,8 +84,52 @@ nav button:hover::after {
 }
 
 footer {
-    
+    background-color: var(--mainText);
+    color: var(--mainBg);
+    padding: 80px 20px 3em 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3em;
 }
+
+footer div {
+    border-top: 1px solid var(--mainBg);
+    border-bottom: 1px solid var(--mainBg);
+    padding-top: 3em;
+    padding-bottom: 3em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+}
+
+footer img {
+    width: 200px;
+    height: 200px;
+}
+
+footer button {
+    padding: 1em 3em;
+    border: solid var(--mainBg) 1px;
+    font-size: 18px;
+    border-radius: 0px;
+    background-color: var(--mainBg);
+    color: var(--mainText);
+} 
+
+footer button:hover {
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+footer iframe {
+    width: 400px;
+    height: 250px;
+    border-radius: 25px;
+}
+
 
 main {
     flex: 1;
