@@ -10,3 +10,7 @@ const switchTab = (thisTab) => {
 }
 
 document.getElementById("homeBtn").addEventListener('click', () => switchTab(loadHome));
+
+
+// Default Module
+switchTab(loadHome);
