@@ -41,7 +41,7 @@ a {
 button {
     background: 0;
     border: 0;
-    all: unset;
+    color: inherit;
 }
 
 body {
@@ -409,7 +409,13 @@ form {
     gap: 1.5em;
 }
 
+input::-webkit-datetime-edit {
+  display: block;
+  padding: 0;
+}
+
 input {
+    appearance:none;
     font-family: "Manrope";
     background: none;
     border: none;
