@@ -349,6 +349,7 @@ footer iframe {
     border: solid 1px var(--mainText);
     padding: 1em 1.5em;
     border-radius: 50px;
+    cursor: pointer;
 }
 
 .menu-part .item .name{
@@ -361,7 +362,3 @@ footer iframe {
     letter-spacing: 1px;
 }
 
-.menu-part .item:hover {
-    cursor: pointer;
-    box-shadow: 0 0 2px 0 var(--mainText);
-}

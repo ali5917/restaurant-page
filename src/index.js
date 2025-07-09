@@ -1,4 +1,5 @@
 import loadHome from './modules/home';
+import loadMenu from './modules/menu';
 import './styles.css';
 
 
@@ -10,6 +11,7 @@ const switchTab = (thisTab) => {
 }
 
 document.getElementById("homeBtn").addEventListener('click', () => switchTab(loadHome));
+document.getElementById("menuBtn").addEventListener('click', () => switchTab(loadMenu));
 
 
 // Default Module
