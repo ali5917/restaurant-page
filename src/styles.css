@@ -362,3 +362,101 @@ footer iframe {
     letter-spacing: 1px;
 }
 
+
+.about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5em;
+    padding: 80px 80px 120px 80px;
+    max-width: 100%;
+}
+
+.about .head{
+    color: var(--mainText);
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about .head h1 {
+    font-family: "IvyOra Display Regular";
+    font-size: 140px;
+    font-weight: 200;
+}
+
+.about .head p {
+    font-family: "IvyOra Display Regular";
+    font-size: 30px;
+    font-weight: 200;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    gap: 1.5em;
+}
+
+input {
+    font-family: "Manrope";
+    background: none;
+    border: none;
+    outline: none;
+    background-color: #DCD8CE;
+    border-radius: 20px;
+    padding: 2em 3em;
+    font-size: 18px;
+}
+
+input:focus, textarea:focus {
+    background-color: #F3F0EA;    
+}
+
+.inside-1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.inside-1 input {
+    flex: 1;
+}
+
+textarea {
+    font-family: "Manrope";
+    background: none;
+    border: none;
+    outline: none;
+    background-color: #DCD8CE;
+    border-radius: 20px;
+    padding: 2em 3em;
+    font-size: 18px;
+    min-height: 200px;
+    max-height: 300px;
+    resize: vertical;
+}
+
+form button {
+    /* margin-top: 1em; */
+    background-color: #D9D2BF;
+    color: var(--mainText);
+    border-radius: 50px;
+    padding: 1em 3em;
+    font-size: 20px;
+    cursor: pointer;
+}
+form button:hover {
+    color: #D9D2BF;
+    background-color: var(--mainText);
+}
+
+form button.reserved {
+    color: #D9D2BF;
+    background-color: var(--mainText);
+}

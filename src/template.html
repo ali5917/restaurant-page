@@ -17,7 +17,7 @@
         <nav>
             <button class="tab-btn" id="homeBtn">Home</button>
             <button class="tab-btn" id="menuBtn">Menu</button>
-            <button class="tab-btn" id="aboutBtn">About</button>
+            <button class="tab-btn" id="reserveBtn">Reserve</button>
         </nav>
     </header>
     <div id="content">
@@ -156,7 +156,29 @@
             </div>
         </div> -->
         <div class="about">
-            
+            <div class="head">
+                <h1>reserve.</h1>
+                <p>Invités appréciés — Guests cherished</p>
+            </div>
+            <form>
+                <input type="text" id="name" name="name" required placeholder="Full Name*">
+
+                <div class="inside-1">
+                    <input type="email" id="email" name="email" required placeholder="Email*">
+    
+                    <input type="tel" id="phone" name="phone" required placeholder="Phone*">
+                </div>
+
+                <input type="date" id="date" name="date" required placeholder="Date*">
+
+                <input type="time" id="time" name="time" required placeholder="Time*">
+
+                <input type="number" id="guests" name="guests" min="1" max="20"placeholder="Number of Guests*">
+
+                <textarea name="requests" rows="4" cols="40" placeholder="Preferences"></textarea>
+
+                <button type="submit">Reserve Table</button>
+            </form>
         </div>
     </div>
     <footer>

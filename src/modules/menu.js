@@ -131,6 +131,4 @@ const desserts = [
     },
 ];
 
-
-
 export default loadMenu;
