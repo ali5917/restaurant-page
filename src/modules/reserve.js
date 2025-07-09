@@ -49,6 +49,7 @@ function createForm () {
     insideDiv.appendChild(createInput("tel", "phone", "Phone*"))
     
     const button = document.createElement("button");
+    button.classList.add("submitBtn");
     button.type = "submit";
     button.textContent = "Reserve Table";
 
@@ -60,7 +61,19 @@ function createForm () {
     form.appendChild(createTextArea("requests", 4, 40, "Preferences"))
     form.appendChild(button);
 
+    form.addEventListener("submit", handleFormSubmit);
+
     return form;
+}
+
+function handleFormSubmit (e) {
+    e.preventDefault();
+    const submitBtn = document.querySelector(".submitBtn");
+    submitBtn.textContent = "Table Reserved!";
+    submitBtn.classList.add("reserved");
+    
+    const form = e.target;
+    form.classList.add("form-disabled");
 }
 
 export default loadReserve;

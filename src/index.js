@@ -17,4 +17,4 @@ document.getElementById("reserveBtn").addEventListener('click', () => switchTab(
 
 
 // Default Module
-// switchTab(loadHome);
+switchTab(loadHome);

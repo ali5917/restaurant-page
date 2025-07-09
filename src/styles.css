@@ -460,3 +460,9 @@ form button.reserved {
     color: #D9D2BF;
     background-color: var(--mainText);
 }
+
+.form-disabled input,
+.form-disabled textarea,
+.form-disabled button {
+    cursor: not-allowed;
+}
