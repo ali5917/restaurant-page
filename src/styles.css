@@ -28,7 +28,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.5s ease;
     font-family: "Manrope";
 }
 
@@ -124,17 +124,17 @@ footer img {
     height: 200px;
 }
 
-footer button {
-    padding: 1em 3em;
+.footerBtn {
     border: solid var(--mainBg) 1px;
     font-size: 18px;
     border-radius: 0px;
     background-color: var(--mainBg);
     color: var(--mainText);
+    padding: 1em 3em;
 } 
 
 footer button:hover {
-    border-radius: 30px;
+    border-radius: 50px;
     cursor: pointer;
 }
 
@@ -154,7 +154,7 @@ footer iframe {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 5em;
+    gap: 8em;
     padding: 80px 80px 80px 80px;
 }
 
@@ -177,27 +177,31 @@ footer iframe {
 }
 
 .essence-cont {
-    display: grid;
-    grid-template-rows: auto 1fr;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    row-gap: 1em;
+}
+
+.essence-cont .grid {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
     column-gap: 5em;
     font-size: 26px;
 }
 
-.essence-cont .head {
+.head {
     font-family: "IvyOra Display Regular";
     font-size: 180px;
 }
 
 .text-1 {
-    grid-row: 2/3;
+    grid-row: 1/2;
     grid-column: 1/2;
 }
 
 .text-2 {
-    grid-row: 2/3;
+    grid-row: 1/2;
     grid-column: 2/3;
 }
 
@@ -211,4 +215,67 @@ footer iframe {
 
 .text-2 img {
     width: 100px;
+}
+
+.amenities-cont {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1em;
+}
+
+.amenities-cont .grid {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    font-size: 20px;
+}
+
+.amenities-cont .grid-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1em;
+    align-items: center;
+    border: solid 1px var(--mainText);
+    padding: 5em 5em 5em 5em;
+}
+
+.grid-item.one {
+    border-left: 0;
+    border-top: 0;
+}
+.grid-item.two {
+    border-top: 0;
+}
+.grid-item.three {
+    border-right: 0;
+    border-top: 0;
+}
+.grid-item.four {
+    border-left: 0;
+    border-bottom: 0;
+}
+.grid-item.five {
+    border-bottom: 0;
+}
+.grid-item.six {
+    border-right: 0;
+    border-bottom: 0;
+}
+
+.orderBtn {
+    background-color: var(--mainText);
+    color: var(--mainBg);
+    border-radius: 50px;
+    padding: 1em 3em;
+    font-size: 20px;
+    cursor: pointer;
+    border: solid 2px var(--mainText);
+}
+
+.orderBtn:hover {
+    color: var(--mainText);
+    background-color: var(--mainBg);
 }
