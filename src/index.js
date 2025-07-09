@@ -13,4 +13,4 @@ document.getElementById("homeBtn").addEventListener('click', () => switchTab(loa
 
 
 // Default Module
-switchTab(loadHome);
+// switchTab(loadHome);

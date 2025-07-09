@@ -1,6 +1,6 @@
-import img1 from '../images/img-1.png';
-import img2 from '../images/img-2.png';
-import img3 from '../images/img-3.png';
+import img1 from '../images/home/one.png';
+import img2 from '../images/home/two.png';
+import img3 from '../images/home/three.png';
 
 const loadHome = () => {
     const home = document.createElement("div");
@@ -86,7 +86,7 @@ function createAmenitiesContainer () {
         {label: "Air Conditioning", icon: acSVG, className: "two"},
         {label: "Heating", icon: heatingSVG, className: "three"},
         {label: "Balcony", icon: balconySVG, className: "four"},
-        {label: "Beach", icon: beachSVG, className: "five"},
+        {label: "Beach Access", icon: beachSVG, className: "five"},
         {label: "Flat TV", icon: TVSVG, className: "six"},
     ];
 
