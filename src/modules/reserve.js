@@ -1,6 +1,6 @@
 const loadReserve = () => {
-    const about = document.createElement("div");
-    about.classList.add("about");
+    const reserve = document.createElement("div");
+    reserve.classList.add("reserve");
 
     const head = document.createElement("div");
     head.classList.add("head");
@@ -13,10 +13,10 @@ const loadReserve = () => {
     head.appendChild(h1);
     head.appendChild(p);
     
-    about.appendChild(head);
-    about.appendChild(createForm());
+    reserve.appendChild(head);
+    reserve.appendChild(createForm());
 
-    document.getElementById("content").appendChild(about);
+    document.getElementById("content").appendChild(reserve);
 }
 
 function createInput (type, name, placeholder, min, max) {

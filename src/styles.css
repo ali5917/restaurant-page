@@ -24,7 +24,7 @@
     --mainText: #171B26;
 }
 
-* {
+*, html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -46,7 +46,9 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    min-width: 100vw;
     background-color: var(--mainBg);
+    overflow-x: hidden;
 }
 
 /* Header Styles */
@@ -177,6 +179,13 @@ footer iframe {
     padding-bottom: 0.2em;
 }
 
+.home .head {
+    font-family: "IvyOra Display Regular";
+    font-size: 180px;
+    font-weight: 200;
+    color: var(--mainText);
+}
+
 .essence-cont {
     display: flex;
     flex-direction: column;
@@ -189,13 +198,6 @@ footer iframe {
     grid-template-columns: 1fr 1fr;
     column-gap: 5em;
     font-size: 26px;
-}
-
-.home .head {
-    font-family: "IvyOra Display Regular";
-    font-size: 180px;
-    font-weight: 200;
-    color: var(--mainText);
 }
 
 .text-1 {
@@ -223,6 +225,8 @@ footer iframe {
 .amenities-cont {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     gap: 1em;
 }
@@ -233,6 +237,7 @@ footer iframe {
     grid-template-columns: repeat(3, 1fr);
     width: 100%;
     font-size: 20px;
+    text-align: center;
 }
 
 .amenities-cont .grid-item {
@@ -363,7 +368,7 @@ footer iframe {
 }
 
 
-.about {
+.reserve {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -373,7 +378,7 @@ footer iframe {
     max-width: 100%;
 }
 
-.about .head{
+.reserve .head{
     color: var(--mainText);
     align-self: center;
     display: flex;
@@ -382,13 +387,13 @@ footer iframe {
     align-items: center;
 }
 
-.about .head h1 {
+.reserve .head h1 {
     font-family: "IvyOra Display Regular";
     font-size: 140px;
     font-weight: 200;
 }
 
-.about .head p {
+.reserve .head p {
     font-family: "IvyOra Display Regular";
     font-size: 30px;
     font-weight: 200;
@@ -425,6 +430,7 @@ input:focus, textarea:focus {
 }
 
 .inside-1 input {
+    width: 100%;
     flex: 1;
 }
 
@@ -443,7 +449,6 @@ textarea {
 }
 
 form button {
-    /* margin-top: 1em; */
     background-color: #D9D2BF;
     color: var(--mainText);
     border-radius: 50px;
@@ -465,4 +470,415 @@ form button.reserved {
 .form-disabled textarea,
 .form-disabled button {
     cursor: not-allowed;
+}
+
+/* Scroll Bar Styling */
+::-webkit-scrollbar {
+    width: 15px; 
+    height: 8px; 
+}
+
+::-webkit-scrollbar-track {
+    background: var(--mainText);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--mainBg);
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    .home h1 {
+        font-size: 140px;
+    }
+
+    .home .head {
+        font-size: 140px;
+    }
+    .menu .head {
+        font-size: 140px;
+    }
+    .reserve .head h1 {
+        font-size: 140px;
+    }
+
+    .essence-cont .grid {
+        font-size: 20px;
+    }
+    .amenities-cont .grid {
+        font-size: 16px;
+    }
+
+    .menu {
+        gap: 3em;
+    }
+
+    .menu-part .item {
+        font-size: 16px;
+    }
+
+    .menu-part .item .name {
+        font-size: 26px;
+    }
+
+    form {
+        width: 80%;
+    }
+}
+
+@media (max-width: 900px) {
+    .home, .menu {
+        padding: 80px 5% 80px 5%;
+    }
+    
+    .home h1 {
+        font-size: 100px;
+    }
+
+    .home .head {
+        font-size: 100px;
+    }
+    .menu .head {
+        font-size: 100px;
+    }
+    .reserve .head h1 {
+        font-size: 100px;
+    }
+
+    .essence-cont .grid {
+        font-size: 14px;
+    }
+    .amenities-cont .grid {
+        font-size: 12px;
+    }
+
+    .text-2 img {
+        width: 60px;
+    }
+
+    footer img {
+        width: 150px;
+        height: 150px;
+    }
+
+    footer iframe {
+        width: 300px;
+        height: 200px;
+        border-radius: 25px;
+    }
+
+    .menu {
+        gap: 3em;
+    }
+
+    .menu-part .items {
+        column-gap: 2em;
+    }
+
+    .menu-part .item {
+        font-size: 14px;
+    }
+
+    .menu-part .item .name {
+        font-size: 22px;
+    }
+
+    form {
+        width: 80%;
+    }
+}
+
+@media (max-width: 660px) {
+    header {
+        flex-direction: column;
+        width: 100%;
+        padding: 20px 5% 20px 5%;
+        gap: 1em;
+    }
+
+    .home, .menu {
+        padding: 80px 5% 80px 5%;
+    }
+    .home {
+        gap: 5em;
+    }
+    .home h1 span {
+        padding: 0px 40px;
+    }
+    
+    .home h1 {
+        font-size: 70px;
+    }
+
+    .home .head {
+        align-self: center;
+        font-size: 60px;
+    }
+    .menu .head {
+        align-self: center;
+        font-size: 60px;
+    }
+    .reserve .head h1  {
+        font-size: 60px;
+    }
+
+    .reserve .head p {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .essence-cont {
+        gap: 1em;
+    }
+    .essence-cont .grid {
+        font-size: 14px;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        column-gap: 0;
+        row-gap: 1.5em;
+    }
+    .text-1 {
+        width: 100%;
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+    .text-2 {
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+    .text-2 .img-cont {
+        justify-content: center;
+        padding-top: 2em;
+    }
+    .text-2 img {
+        width: 60px;
+    }
+
+    .amenities-cont .grid {
+        font-size: 10px;
+    }
+    .amenities-cont .grid-item {
+        padding: 20px;
+    }
+
+    .orderBtn {
+        font-size: 16px;
+    }
+
+    footer div {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    footer img {
+        width: 120px;
+        height: 150px;
+    }
+
+    footer iframe {
+        width: 300px;
+        height: 200px;
+        border-radius: 25px;
+        padding-bottom: 0.5em;
+    }
+    .footerBtn {
+        font-size: 16px;
+    }
+
+    .menu {
+        gap: 3em;
+        padding-top: 3em;
+    }
+
+    .menu-part .items {
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: 1fr;
+        row-gap: 1em;
+    }
+
+    .menu-part .item {
+        font-size: 14px;
+    }
+
+    .menu-part .item .name {
+        font-size: 20px;
+    }
+
+    .reserve {
+        padding: 80px 5% 120px 5%;
+    }
+
+    form {
+        width: 100%;
+    }
+    
+    form input {
+        font-size: 14px;
+    }
+
+    textarea {
+        font-size: 14px;
+    }
+    
+    form button {
+        padding: 1em 2em;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    header {
+        flex-direction: column;
+        width: 100%;
+        padding: 20px 5% 20px 5%;
+        gap: 1em;
+    }
+
+    nav {
+        gap: 3em;
+    }
+    nav button {
+        font-size: 18px;
+    }
+
+    .home, .menu {
+        padding: 80px 5% 80px 5%;
+    }
+    .home {
+        gap: 5em;
+    }
+    .home h1 span {
+        padding: 0px 30px;
+    }
+    
+    .home h1 {
+        font-size: 50px;
+    }
+
+    .home .head {
+        align-self: center;
+        font-size: 60px;
+    }
+    .menu .head {
+        align-self: center;
+        font-size: 60px;
+    }
+    .reserve .head h1  {
+        font-size: 60px;
+    }
+
+    .reserve .head p {
+        text-align: center;
+        font-size: 20px;
+    }
+
+    .essence-cont {
+        gap: 1em;
+    }
+    .essence-cont .grid {
+        font-size: 14px;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr;
+        column-gap: 0;
+        row-gap: 1.5em;
+    }
+    .text-1 {
+        width: 100%;
+        grid-row: 1/2;
+        grid-column: 1/2;
+    }
+    .text-2 {
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+    .text-2 .img-cont {
+        justify-content: center;
+        padding-top: 2em;
+    }
+    .text-2 img {
+        width: 60px;
+    }
+
+    .amenities-cont .grid {
+        font-size: 10px;
+    }
+    .amenities-cont .grid-item {
+        padding: 20px;
+    }
+
+    .orderBtn {
+        font-size: 16px;
+    }
+
+    footer {
+        padding: 60px 0 1.5em 0;
+    }
+    footer div {
+        flex-direction: column;
+        gap: 0.5em;
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
+
+    footer img {
+        width: 120px;
+        height: 150px;
+    }
+
+    footer p {
+        font-size: 14px;
+    }
+
+    footer iframe {
+        width: 250px;
+        height: 175px;
+        border-radius: 25px;
+        padding-bottom: 0.5em;
+    }
+    .footerBtn {
+        font-size: 16px;
+    }
+
+    .menu {
+        gap: 3em;
+        padding-top: 3em;
+    }
+
+    .menu-part .items {
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: 1fr;
+        row-gap: 1em;
+    }
+
+    .menu-part .item {
+        font-size: 14px;
+    }
+
+    .menu-part .item .name {
+        font-size: 20px;
+    }
+
+    .reserve {
+        padding: 80px 5% 120px 5%;
+        gap: 3em;
+    }
+
+    form {
+        width: 100%;
+        gap: 1em;
+    }
+    
+    form input {
+        font-size: 12px;
+        padding: 1em 2em;
+    }
+    
+    textarea {
+        font-size: 14px;
+    }
+    
+    form button {
+        padding: 1em 2em;
+        font-size: 14px;
+    }
 }
