@@ -5,6 +5,20 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "IvyOra Display Light";
+  src: url('./fonts/ivyora-display/IvyOraDisplay-Light.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "IvyOra Display Regular";
+  src: url('./fonts/ivyora-display/IvyOraDisplay-Regular.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+}
+
 :root {
     --mainBg: #E8E4D9;
     --mainText: #171B26;
@@ -35,17 +49,17 @@ body {
     background-color: var(--mainBg);
 }
 
+/* Header Styles */
 header {
-    background-color: var(--mainText);
-    color: var(--mainBg);
-    padding: 20px 40px 20px 40px;
+    background-color: var(--mainBg);
+    color: var(--mainText);
+    padding: 20px 60px 20px 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .logo {
-    color: var(--mainBg);
     font-family: "Editor's Note";
     font-weight: 200;
     font-size: 80px;
@@ -61,7 +75,6 @@ nav {
 
 nav button {
     position: relative;
-    color: var(--mainBg);
     font-size: 20px;
     font-weight: 200;
     cursor: pointer;
@@ -74,7 +87,7 @@ nav button::after {
     bottom: 0;
     height: 1.2px;
     width: 100%;
-    background-color: var(--mainBg);
+    background-color: var(--mainText);
     transform: scaleX(0);
     transition: transform 0.25s ease-in-out;
 }
@@ -83,6 +96,7 @@ nav button:hover::after {
     transform: scaleX(1);   
 }
 
+/* Footer Styles */
 footer {
     background-color: var(--mainText);
     color: var(--mainBg);
@@ -130,7 +144,71 @@ footer iframe {
     border-radius: 25px;
 }
 
-
-main {
+#content {
     flex: 1;
+}
+
+/* Home Styles */
+.home {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5em;
+    padding: 80px 80px 80px 80px;
+}
+
+.home h1 {
+    font-family: "IvyOra Display Light";
+    font-size: 180px;
+    color: var(--mainText);
+    font-weight: 200;
+    align-self: center;
+}
+
+.home h1 span {
+    font-family: "IvyOra Display Light";
+    border: solid 1px black;
+    padding: 0px 60px;
+    border-radius: 150px;
+    background-color: var(--mainText);
+    color: var(--mainBg);
+    box-shadow: 0 0 5px 0 var(--mainText);
+}
+
+.essence-cont {
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: 1fr 1fr;
+    width: 100%;
+    row-gap: 1em;
+    column-gap: 5em;
+    font-size: 26px;
+}
+
+.essence-cont .head {
+    font-family: "IvyOra Display Regular";
+    font-size: 180px;
+}
+
+.text-1 {
+    grid-row: 2/3;
+    grid-column: 1/2;
+}
+
+.text-2 {
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+
+.text-2 .img-cont {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 1em;
+    gap: 1em;
+}
+
+.text-2 img {
+    width: 100px;
 }
