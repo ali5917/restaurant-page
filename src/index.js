@@ -1,20 +1,9 @@
-import loadHome from './modules/home';
-import loadMenu from './modules/menu';
-import loadReserve from './modules/reserve';
+import { switchTab, loadHome, loadMenu, loadReserve } from './tabController';
 import './styles.css';
 
-
-const clearContent = () => document.getElementById("content").innerHTML = ""; 
-
-const switchTab = (thisTab) => {
-    clearContent();
-    thisTab();
-}
+switchTab(loadHome);
 
 document.getElementById("homeBtn").addEventListener('click', () => switchTab(loadHome));
 document.getElementById("menuBtn").addEventListener('click', () => switchTab(loadMenu));
 document.getElementById("reserveBtn").addEventListener('click', () => switchTab(loadReserve));
-
-
-// Default Module
-switchTab(loadHome);
+document.querySelector(".logo").addEventListener('click', () => switchTab(loadHome));

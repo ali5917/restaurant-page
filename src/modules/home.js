@@ -1,3 +1,5 @@
+import { switchTab, loadMenu, loadReserve } from '../tabController';
+
 import img1 from '../images/home/one.png';
 import img2 from '../images/home/two.png';
 import img3 from '../images/home/three.png';
@@ -11,14 +13,13 @@ const loadHome = () => {
     
     const orderBtn = document.createElement("button");
     orderBtn.classList.add("orderBtn");
-    orderBtn.textContent = "Order Now";
-    
+    orderBtn.textContent = "Reserve Now";
+    orderBtn.addEventListener('click', () => switchTab(loadReserve));
     
     home.appendChild(h1);
     home.appendChild(createEssenceContainer()); 
     home.appendChild(createAmenitiesContainer()); 
     home.appendChild(orderBtn);
-    
     
     document.getElementById("content").appendChild(home);
 }
