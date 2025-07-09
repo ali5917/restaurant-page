@@ -9,7 +9,9 @@ const loadMenu = () => {
     menu.classList.add("menu");
 
     menu.appendChild(createGrid());
-    
+    menu.appendChild(createMenuSection('entrées.', 'starters', starters));
+    menu.appendChild(createMenuSection('maison.', 'mains',  mains));
+    menu.appendChild(createMenuSection('délices.', 'desserts', desserts));
 
     document.getElementById("content").appendChild(menu);
 }
@@ -39,12 +41,95 @@ function createGrid () {
 
 function createMenuItem (name, details) {
     const item = document.createElement("div");
-    item.classList.add()
+    item.classList.add("item");
+
+    const nameP = document.createElement('p');
+    nameP.className = 'name';
+    nameP.textContent = name;
+
+    const detailsP = document.createElement('p');
+    detailsP.className = 'details';
+    detailsP.textContent = details;
+
+    item.append(nameP, detailsP);
+    return item;
 }
 
 function createMenuSection (title, name, itemsArray) {
+    const section = document.createElement("div");
+    section.classList.add(name, "menu-part");
 
+    const head = document.createElement("h1");
+    head.classList.add("head");
+    head.textContent = title;
+
+    const items = document.createElement("div");
+    items.classList.add("items");
+
+    itemsArray.forEach(({name, details}) => {
+        items.appendChild(createMenuItem(name, details));
+    })
+
+    section.append(head, items);
+    return section;
 }
+
+const starters = [
+        {
+            name: 'Foie Gras au Torchon',
+            details: 'Duck liver cured in cognac and sea salt, served with brioche toast and fig marmalade.',
+        },
+        {
+            name: 'Carpaccio de Saint-Jacques',
+            details: 'Thinly sliced scallops with lemon oil, caviar pearls, and microgreens.',
+        },
+        {
+            name: 'Soupe à l’Oignon Gratinée',
+            details: 'Classic French onion soup baked with Gruyère and herb croutons.',
+        },
+        {
+            name: 'Tartare de Saumon',
+            details: 'Hand-chopped Atlantic salmon, avocado, yuzu crème fraîche, and chive oil.',
+        },
+    ];
+
+const mains = [
+    {
+        name: 'Filet de Bœuf Rossini',
+        details: 'Tenderloin of beef, pan-seared foie gras, black truffle jus, and pomme purée.',
+        },
+    {
+        name: "Canard à l'Orange Moderne",
+        details: 'Crispy duck breast glazed with burnt orange reduction, fennel purée, and spiced jus.',
+    },
+    {
+        name: 'Coquilles Saint-Jacques Rôties',
+        details: 'Pan-roasted scallops with saffron beurre blanc, seaweed crumb, and baby leeks.',
+    },
+    {
+        name: 'Ravioles de Homard',
+        details: 'Lobster-stuffed ravioli in a bisque emulsion with a hint of lemon zest.',
+    },
+];
+
+const desserts = [
+    {
+        name: 'Crème Brûlée Madagascar',
+        details: 'Classic vanilla bean custard with a perfectly crisp caramel top.',
+    },
+    {
+        name: 'Tarte Chocolat Noir',
+        details: 'Bitter dark chocolate tart with sea salt and hazelnut praline.',
+    },
+    {
+        name: 'Mille-Feuille Pistache',
+        details: 'Crisp puff pastry layered with pistachio cream and fresh raspberries.',
+    },
+    {
+        name: 'Soufflé Grand Marnier',
+        details: 'Light orange soufflé served with warm vanilla crème anglaise.',
+    },
+];
 
 
 
